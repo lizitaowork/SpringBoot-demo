@@ -44,13 +44,17 @@ public class RedisConfig extends CachingConfigurerSupport {
         };
     }
 
+    /**
+     * 构建连接工厂RedisCacheManager
+     * @return
+     */
     @Bean
     public LettuceConnectionFactory lettuceConnectionFactory(){
         return new LettuceConnectionFactory();
     }
 
     /**
-     * 缓存管理器
+     * 构建缓存管理器RedisCacheManager
      * @param lettuceConnectionFactory
      * @return
      */
@@ -59,6 +63,11 @@ public class RedisConfig extends CachingConfigurerSupport {
         return RedisCacheManager.create(lettuceConnectionFactory);
     }
 
+    /**
+     * 序列化RedisTemplate
+     * @param lettuceConnectionFactory
+     * @return
+     */
     @Bean
     public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory lettuceConnectionFactory){
         Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);

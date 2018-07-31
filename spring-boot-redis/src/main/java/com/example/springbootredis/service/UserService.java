@@ -24,14 +24,7 @@ public class UserService {
         return "set user failed";
     }
 
-    @Cacheable(value = "user", key = "'user_'+#key")
     public User getUser(String key){
-        System.out.println(key + "获取数据！");
-        return (User)redisTemplate.opsForValue().get(key);
-    }
-
-    @Cacheable(value = "keyGenerator",keyGenerator = "keyGenerator")
-    public User cacheOfKeyGenerator(String key){
         System.out.println(key + "获取数据！");
         return (User)redisTemplate.opsForValue().get(key);
     }

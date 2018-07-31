@@ -43,9 +43,4 @@ public class RedisController {
     public User setUser(@PathVariable(value = "key") String key) {
         return userService.getUser(key);
     }
-
-    @RequestMapping(value = "/cache/{key}")
-    public User cache(@PathVariable(value = "key") String key) {
-        return userService.cacheOfKeyGenerator(key);
-    }
 }
