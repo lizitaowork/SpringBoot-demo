@@ -1,6 +1,5 @@
-package com.example.springbootredis.config;
+package com.example.springbootcache.config;
 
-import com.example.springbootredis.bean.User;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,65 +8,36 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheManager;
-import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-import java.lang.reflect.Method;
-
 /**
- * Created by zitao.li on 2018/7/30.
+ * Created by zitao.li on 2018/7/31.
  */
 @Configuration
 @EnableCaching
 public class RedisConfig extends CachingConfigurerSupport {
-    /**
-     *
-     * 自定义缓存key生成策略，若想使用这个key, 只需要将注解上keyGenerator值设置为keyGenerator即可
-     * @return
-     */
-    @Bean
-    public KeyGenerator keyGenerator(){
-        return new KeyGenerator() {
-            @Override
-            public Object generate(Object taget, Method method, Object... params) {
-                StringBuffer sb = new StringBuffer();
-                sb.append(taget.getClass().getName());
-                sb.append(method.getName());
-                for(Object obj : params){
-                    sb.append(obj.toString());
-                }
-                return sb.toString();
-            }
-        };
-    }
-
     @Bean
     public LettuceConnectionFactory lettuceConnectionFactory(){
         return new LettuceConnectionFactory();
     }
 
-    /**
-     * 缓存管理器
-     * @param lettuceConnectionFactory
-     * @return
-     */
     @Bean
-    public RedisCacheManager cacheManager(LettuceConnectionFactory lettuceConnectionFactory){
+    public RedisCacheManager redisCacheManager(LettuceConnectionFactory lettuceConnectionFactory) {
         return RedisCacheManager.create(lettuceConnectionFactory);
     }
 
     @Bean
-    public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory lettuceConnectionFactory){
+    public RedisTemplate<Object, Object> redisTemplate(LettuceConnectionFactory lettuceConnectionFactory){
         Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
         objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
         jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
 
-        RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
+        RedisTemplate<Object, Object> template = new RedisTemplate<Object, Object>();
         template.setConnectionFactory(lettuceConnectionFactory);
         template.setKeySerializer(new StringRedisSerializer());
         template.setValueSerializer(jackson2JsonRedisSerializer);
