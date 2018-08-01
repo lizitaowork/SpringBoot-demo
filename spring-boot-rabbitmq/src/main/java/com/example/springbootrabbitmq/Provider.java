@@ -14,6 +14,10 @@ public class Provider {
     @Autowired
     private AmqpTemplate rabbitTemplate;
 
+    /**
+     * 发送消息
+     * @param object
+     */
     public void send(Object object){
         System.out.println("Sender : " + JSON.toJSONString(object));
         this.rabbitTemplate.convertAndSend(QueueConstants.MESSAGE_EXCHANGE, QueueConstants.MESSAGE_ROUTE_KEY, object);

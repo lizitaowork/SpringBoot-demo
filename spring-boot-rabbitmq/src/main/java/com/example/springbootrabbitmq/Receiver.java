@@ -14,8 +14,13 @@ import org.springframework.stereotype.Component;
 @Component
 @RabbitListener(queues = QueueConstants.MESSAGE_QUEUE_NAME)
 public class Receiver {
+    /**
+     * 接受消息
+     * @RabbitHandler会自动获取消息
+     * @param messageEntity
+     */
     @RabbitHandler
-    public void process(@Payload MessageEntity messageEntity){
+    public void handler(@Payload MessageEntity messageEntity){
         System.out.println("Receiver : " + JSON.toJSONString(messageEntity));
     }
 }
