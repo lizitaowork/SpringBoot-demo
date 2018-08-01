@@ -6,6 +6,9 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import javax.xml.crypto.Data;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +34,8 @@ public class CacheService {
      */
     @Cacheable(value = "generator", key = "'map_'+#key")
     public String get(int key){
-        System.out.println(key + "获取数据！");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(sdf.format(new Date()) + " 获取数据 : " + key);
         return map.get(key);
     }
 

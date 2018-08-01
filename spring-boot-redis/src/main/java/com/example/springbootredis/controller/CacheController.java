@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by zitao.li on 2018/7/31.
@@ -17,7 +19,8 @@ public class CacheController {
 
     @RequestMapping("/get")
     public String get(int key){
-        return cacheService.get(key);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return sdf.format(new Date()) + cacheService.get(key);
     }
 
     @RequestMapping("/put")
