@@ -1,34 +1,121 @@
-2018-07-28 17:20:29.301  INFO 12438 --- [main] c.e.s.SpringBootWebsocketApplication     : Starting SpringBootWebsocketApplication on bianlifengdeMacBook-Pro-7.local with PID 12438 (/Users/bianlifeng/Project_lizitao_work/SpringBoot-demo/spring-boot-websocket/target/classes started by bianlifeng in /Users/bianlifeng/Project_lizitao_work/SpringBoot-demo/spring-boot-websocket)
-2018-07-28 17:20:29.304  INFO 12438 --- [main] c.e.s.SpringBootWebsocketApplication     : No active profile set, falling back to default profiles: default
-2018-07-28 17:20:29.388  INFO 12438 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@51e5fc98: startup date [Sat Jul 28 17:20:29 CST 2018]; root of context hierarchy
-2018-07-28 17:20:30.340  INFO 12438 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2018-07-28 17:20:30.362  INFO 12438 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-07-28 17:20:30.362  INFO 12438 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2018-07-28 17:20:30.367  INFO 12438 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bianlifeng/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-07-28 17:20:30.439  INFO 12438 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-07-28 17:20:30.439  INFO 12438 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1051 ms
-2018-07-28 17:20:30.585  INFO 12438 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-07-28 17:20:30.592  INFO 12438 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-07-28 17:20:30.592  INFO 12438 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-07-28 17:20:30.592  INFO 12438 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-07-28 17:20:30.593  INFO 12438 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-07-28 17:20:30.725  INFO 12438 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-07-28 17:20:30.932  INFO 12438 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@51e5fc98: startup date [Sat Jul 28 17:20:29 CST 2018]; root of context hierarchy
-2018-07-28 17:20:30.983  INFO 12438 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index/]}" onto public java.lang.String com.example.springbootwebsocket.controller.IndexController.index()
-2018-07-28 17:20:30.986  INFO 12438 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pushVideoListToWeb],methods=[POST],consumes=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.springbootwebsocket.controller.WebSockController.pushVideoListToWeb(java.util.Map<java.lang.String, java.lang.Object>)
-2018-07-28 17:20:30.989  INFO 12438 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-07-28 17:20:30.989  INFO 12438 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-07-28 17:20:31.010  INFO 12438 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-07-28 17:20:31.011  INFO 12438 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-07-28 17:20:31.108  INFO 12438 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2018-07-28 17:20:31.270  INFO 12438 --- [main] o.s.w.s.s.s.ServerEndpointExporter       : Registering @ServerEndpoint class: class com.example.springbootwebsocket.service.WebSocketServer
-2018-07-28 17:20:31.278  INFO 12438 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-07-28 17:20:31.330  INFO 12438 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2018-07-28 17:20:31.335  INFO 12438 --- [main] c.e.s.SpringBootWebsocketApplication     : Started SpringBootWebsocketApplication in 17.403 seconds (JVM running for 23.166)
-2018-07-28 17:20:45.307  INFO 12438 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-07-28 17:20:45.307  INFO 12438 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-07-28 17:20:45.322  INFO 12438 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
-2018-07-28 17:20:45.772  INFO 12438 --- [http-nio-8080-exec-2] c.e.s.service.WebSocketServer            : 有新连接加入！当前在线人数为1
-2018-07-28 17:37:05.722  INFO 12438 --- [Thread-38] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@51e5fc98: startup date [Sat Jul 28 17:20:29 CST 2018]; root of context hierarchy
-2018-07-28 17:37:05.728  INFO 12438 --- [Thread-38] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-07-28 17:37:05.792  INFO 12438 --- [localhost-startStop-2] c.e.s.service.WebSocketServer            : 有一连接关闭！当前在线人数为0
+2018-08-03 13:43:23.105  INFO 86018 --- [main] c.e.s.SpringBootWebsocketApplication     : Starting SpringBootWebsocketApplication on bianlifengdeMacBook-Pro-7.local with PID 86018 (/Users/bianlifeng/Project_lizitao_work/SpringBoot-demo/spring-boot-websocket/target/classes started by bianlifeng in /Users/bianlifeng/Project_lizitao_work/SpringBoot-demo/spring-boot-websocket)
+2018-08-03 13:43:23.116  INFO 86018 --- [main] c.e.s.SpringBootWebsocketApplication     : No active profile set, falling back to default profiles: default
+2018-08-03 13:43:23.359  INFO 86018 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e91d63f: startup date [Fri Aug 03 13:43:23 CST 2018]; root of context hierarchy
+2018-08-03 13:43:25.697  INFO 86018 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-03 13:43:25.748  INFO 86018 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-03 13:43:25.749  INFO 86018 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-03 13:43:25.753  INFO 86018 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bianlifeng/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-03 13:43:25.854  INFO 86018 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-03 13:43:25.854  INFO 86018 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2496 ms
+2018-08-03 13:43:26.033  INFO 86018 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-03 13:43:26.038  INFO 86018 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-03 13:43:26.038  INFO 86018 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-03 13:43:26.038  INFO 86018 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-03 13:43:26.039  INFO 86018 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-03 13:43:26.159  INFO 86018 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-03 13:43:26.401  INFO 86018 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e91d63f: startup date [Fri Aug 03 13:43:23 CST 2018]; root of context hierarchy
+2018-08-03 13:43:26.455  INFO 86018 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index/]}" onto public java.lang.String com.example.springbootwebsocket.controller.IndexController.index()
+2018-08-03 13:43:26.459  INFO 86018 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pushVideoListToWeb],methods=[POST],consumes=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.springbootwebsocket.controller.WebSockController.pushVideoListToWeb(java.util.Map<java.lang.String, java.lang.Object>)
+2018-08-03 13:43:26.462  INFO 86018 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-03 13:43:26.463  INFO 86018 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-03 13:43:26.486  INFO 86018 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-03 13:43:26.487  INFO 86018 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-03 13:43:26.591  INFO 86018 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-03 13:43:26.776  INFO 86018 --- [main] o.s.w.s.s.s.ServerEndpointExporter       : Registering @ServerEndpoint class: class com.example.springbootwebsocket.service.WebSocketServer
+2018-08-03 13:43:26.788  INFO 86018 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-03 13:43:26.844  INFO 86018 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-03 13:43:26.848  INFO 86018 --- [main] c.e.s.SpringBootWebsocketApplication     : Started SpringBootWebsocketApplication in 4.705 seconds (JVM running for 6.232)
+2018-08-03 13:45:54.511  INFO 86018 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-03 13:45:54.512  INFO 86018 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-03 13:45:54.529  INFO 86018 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2018-08-03 13:49:02.624  INFO 86018 --- [http-nio-8080-exec-7] c.e.s.service.WebSocketServer            : 有新连接加入！当前在线人数为1
+2018-08-03 13:49:46.346  INFO 86018 --- [http-nio-8080-exec-6] c.e.s.service.WebSocketServer            : 来自客户端的消息:dd
+2018-08-03 13:50:54.369  INFO 86018 --- [Thread-13] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e91d63f: startup date [Fri Aug 03 13:43:23 CST 2018]; root of context hierarchy
+2018-08-03 13:50:54.381  INFO 86018 --- [Thread-13] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-03 13:50:54.443  INFO 86018 --- [localhost-startStop-2] c.e.s.service.WebSocketServer            : 有一连接关闭！当前在线人数为0
+2018-08-03 13:50:58.109  INFO 86068 --- [main] c.e.s.SpringBootWebsocketApplication     : Starting SpringBootWebsocketApplication on bianlifengdeMacBook-Pro-7.local with PID 86068 (/Users/bianlifeng/Project_lizitao_work/SpringBoot-demo/spring-boot-websocket/target/classes started by bianlifeng in /Users/bianlifeng/Project_lizitao_work/SpringBoot-demo/spring-boot-websocket)
+2018-08-03 13:50:58.114  INFO 86068 --- [main] c.e.s.SpringBootWebsocketApplication     : No active profile set, falling back to default profiles: default
+2018-08-03 13:50:58.193  INFO 86068 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d4342c2: startup date [Fri Aug 03 13:50:58 CST 2018]; root of context hierarchy
+2018-08-03 13:50:59.921  INFO 86068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-03 13:50:59.940  INFO 86068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-03 13:50:59.941  INFO 86068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-03 13:50:59.945  INFO 86068 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bianlifeng/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-03 13:51:00.014  INFO 86068 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-03 13:51:00.014  INFO 86068 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1821 ms
+2018-08-03 13:51:00.136  INFO 86068 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-03 13:51:00.141  INFO 86068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-03 13:51:00.141  INFO 86068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-03 13:51:00.141  INFO 86068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-03 13:51:00.142  INFO 86068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-03 13:51:00.270  INFO 86068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-03 13:51:00.465  INFO 86068 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d4342c2: startup date [Fri Aug 03 13:50:58 CST 2018]; root of context hierarchy
+2018-08-03 13:51:00.514  INFO 86068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index/]}" onto public java.lang.String com.example.springbootwebsocket.controller.IndexController.index()
+2018-08-03 13:51:00.518  INFO 86068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pushVideoListToWeb],methods=[POST],consumes=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.springbootwebsocket.controller.WebSockController.pushVideoListToWeb(java.util.Map<java.lang.String, java.lang.Object>)
+2018-08-03 13:51:00.521  INFO 86068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-03 13:51:00.522  INFO 86068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-03 13:51:00.545  INFO 86068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-03 13:51:00.545  INFO 86068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-03 13:51:00.660  INFO 86068 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-03 13:51:00.843  INFO 86068 --- [main] o.s.w.s.s.s.ServerEndpointExporter       : Registering @ServerEndpoint class: class com.example.springbootwebsocket.service.WebSocketServer
+2018-08-03 13:51:00.849  INFO 86068 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-03 13:51:00.898  INFO 86068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-03 13:51:00.903  INFO 86068 --- [main] c.e.s.SpringBootWebsocketApplication     : Started SpringBootWebsocketApplication in 3.375 seconds (JVM running for 4.445)
+2018-08-03 13:51:04.564  INFO 86068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-03 13:51:04.565  INFO 86068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-03 13:51:04.585  INFO 86068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-08-03 13:51:05.151  INFO 86068 --- [http-nio-8080-exec-2] c.e.s.service.WebSocketServer            : 有新连接加入！当前在线人数为1
+2018-08-03 13:51:09.039  INFO 86068 --- [http-nio-8080-exec-3] c.e.s.service.WebSocketServer            : 来自客户端的消息:[object Object]
+2018-08-03 13:53:25.391  INFO 86068 --- [Thread-10] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d4342c2: startup date [Fri Aug 03 13:50:58 CST 2018]; root of context hierarchy
+2018-08-03 13:53:25.398  INFO 86068 --- [Thread-10] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-03 13:53:25.464  INFO 86068 --- [localhost-startStop-2] c.e.s.service.WebSocketServer            : 有一连接关闭！当前在线人数为0
+2018-08-03 13:53:30.428  INFO 86076 --- [main] c.e.s.SpringBootWebsocketApplication     : Starting SpringBootWebsocketApplication on bianlifengdeMacBook-Pro-7.local with PID 86076 (/Users/bianlifeng/Project_lizitao_work/SpringBoot-demo/spring-boot-websocket/target/classes started by bianlifeng in /Users/bianlifeng/Project_lizitao_work/SpringBoot-demo/spring-boot-websocket)
+2018-08-03 13:53:30.442  INFO 86076 --- [main] c.e.s.SpringBootWebsocketApplication     : No active profile set, falling back to default profiles: default
+2018-08-03 13:53:30.502  INFO 86076 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e91d63f: startup date [Fri Aug 03 13:53:30 CST 2018]; root of context hierarchy
+2018-08-03 13:53:32.207  INFO 86076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-03 13:53:32.225  INFO 86076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-03 13:53:32.226  INFO 86076 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-03 13:53:32.231  INFO 86076 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bianlifeng/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-03 13:53:32.297  INFO 86076 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-03 13:53:32.297  INFO 86076 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1795 ms
+2018-08-03 13:53:32.409  INFO 86076 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-03 13:53:32.415  INFO 86076 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-03 13:53:32.415  INFO 86076 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-03 13:53:32.416  INFO 86076 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-03 13:53:32.416  INFO 86076 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-03 13:53:32.563  INFO 86076 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-03 13:53:32.768  INFO 86076 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e91d63f: startup date [Fri Aug 03 13:53:30 CST 2018]; root of context hierarchy
+2018-08-03 13:53:32.813  INFO 86076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index/]}" onto public java.lang.String com.example.springbootwebsocket.controller.IndexController.index()
+2018-08-03 13:53:32.816  INFO 86076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pushVideoListToWeb],methods=[POST],consumes=[application/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.springbootwebsocket.controller.WebSockController.pushVideoListToWeb(java.util.Map<java.lang.String, java.lang.Object>)
+2018-08-03 13:53:32.819  INFO 86076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-03 13:53:32.820  INFO 86076 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-03 13:53:32.844  INFO 86076 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-03 13:53:32.844  INFO 86076 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-03 13:53:32.952  INFO 86076 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-03 13:53:33.119  INFO 86076 --- [main] o.s.w.s.s.s.ServerEndpointExporter       : Registering @ServerEndpoint class: class com.example.springbootwebsocket.service.WebSocketServer
+2018-08-03 13:53:33.128  INFO 86076 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-08-03 13:53:33.140  INFO 86076 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-03 13:53:33.150 ERROR 86076 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: No payload parameter present on the method [onMessage] of class [com.example.springbootwebsocket.service.WebSocketServer] that was annotated with OnMessage
+	at org.apache.tomcat.websocket.pojo.PojoMethodMapping$MessageHandlerInfo.<init>(PojoMethodMapping.java:566) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.pojo.PojoMethodMapping.<init>(PojoMethodMapping.java:132) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:147) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:234) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoint(ServerEndpointExporter.java:155) ~[spring-websocket-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoints(ServerEndpointExporter.java:133) ~[spring-websocket-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.afterSingletonsInstantiated(ServerEndpointExporter.java:111) ~[spring-websocket-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:777) ~[spring-beans-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at com.example.springbootwebsocket.SpringBootWebsocketApplication.main(SpringBootWebsocketApplication.java:10) [classes/:na]
+
+2018-08-03 13:53:33.152  INFO 86076 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e91d63f: startup date [Fri Aug 03 13:53:30 CST 2018]; root of context hierarchy
+2018-08-03 13:53:33.154  INFO 86076 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

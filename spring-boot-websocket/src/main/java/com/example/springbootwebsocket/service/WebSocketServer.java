@@ -64,7 +64,7 @@ public class WebSocketServer {
         //群发消息
         for (WebSocketServer item : webSocketSet) {
             try {
-                item.sendMessage(message);
+                item.sendMessage("");
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -1,4 +1,4 @@
-package com.web.chat.webchat.config;
+package com.web.chat.webchat.config.webSocket;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -60,8 +60,10 @@
 
     //发送消息
     function send(){
+        var msg = new Object();
         var message = document.getElementById('text').value;
-        websocket.send(message);
+        msg.message = message;
+        websocket.send(msg);
     }
 </script>
 </html>
